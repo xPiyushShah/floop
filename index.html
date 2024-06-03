@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fonts.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div class="container-1">
+      <div class="main-box">
+        <!-- first section -->
+        <div>
+          <div class="left-box">
+            <div class="text-context">
+              <span>AWARD WINNING</span>
+              <div class="dark">DIGITAL MARKETING AGENCY</div>
+              <div class="nor">
+                Morbi sed lacus nec risus finibus feugiat et fermentum nibh.
+                Pellentesque vitae ante at elit fringilla ac at purus, Morbi sed
+                lacus nec risus finibus feugiat et fermentum
+              </div>
+              <button class="contact" id="contactButton">CONTACT US</button>
+            </div>
+          </div>
+          <div class="right-box">
+            <img src="../img/hero.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let popups = document.getElementsByClassName("pop-up");
+      let myButton = document.getElementById("contactButton");
+      let backdrop = document.getElementById("backdrop");
+
+      myButton.addEventListener("click", function () {
+        // Assuming you want to show all elements with class "pop-up"
+        for (let i = 0; i < popups.length; i++) {
+          popups[i].style.display = "block";
+        }
+        backdrop.classList.add("blur");
+      });
+
+
+      document.addEventListener("click", function (event) {
+        if (!event.target.closest(".pop-up") && event.target !== myButton) {
+          for (let i = 0; i < popups.length; i++) {
+            popups[i].style.display = "none";
+          }
+          backdrop.style.filter = "blur";
+        }
+      });
+      var emailBox = document.querySelector('.email-box');
+
+
+emailBox.addEventListener('focus', function() {
+
+    this.querySelector('#email-label').style.transform = 'translateX(-200px)';
+});
+
+    </script>
+    <div class="pop-up" id="popupForm">
+      <div class="pop-lister">
+        <h2>Talk to us</h2>
+        <form action="https://getform.io/f/jbwxzvwa" method="post">
+          <div class="email-box" id="email-input">
+            <div class="input-data">
+              <label id="email-label">Work email*</label>
+              <input type="email" required name="email"/>
+            </div>
+          </div>
+          <div class="name-box">
+            <label class="name-label">First name*</label>
+            <input type="text" required name="fist"/>
+            <span class="lost">
+              <label class="name-label-2">Last name*</label>
+              <input type="text" required  name="last"/>
+            </span>
+          </div>
+          <div class="check-box">
+            <input type="checkbox" />
+            <div class="label">
+              <span
+                >I agree to Fyle's terms and conditions, and provide consent to
+                send me communication.</span
+              >
+            </div>
+          </div>
+          <div class="btn">
+            <button class="btn-box">CONTACT US</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- what we do -->
+    <div class="n-sec">
+      <div class="container-1">
+        <div class="donkey">
+          <div class="do-header">WHAT WE DO</div>
+          <div class="store">
+            <div class="fi">SERVICES PROVIDE FOR YOU</div>
+            <div class="se">
+              Morbi sed lacus nec risus finibus feugiat et fermentum nibh.
+              Pellentesque vitae ante at elit fringilla ac at purus, Morbi sed
+              lacus nec risus finibus feugiat et fermentum
+            </div>
+          </div>
+          <div class="image-slice">
+            <div class="img-store" id="looked">
+              <img src="../img/1.png" alt="" class="bby-1" />
+              <img src="../img/2.png" alt="" class=".image" />
+              <span class="mid-box">
+                <div class="tool-text">
+                  <div class="tgo">
+                    <img src="../img/icon/icon.png  " alt="" class=".image" />
+                  </div>
+                  <span class="text-2">WEB DEVELOPMENT</span>
+                  <div class="text-3">
+                    Morbi sed lacus nec risus finibus feugiat et fermentum nibh.
+                    Pellentesque
+                  </div>
+                  <div class="more-txt">
+                    <div class="linker">
+                      <a href="www.fylehq.com" target="_blank">
+                        <span class="crew"> READ MORE </span>
+                        <span class="crew-2">
+                          <img src="../img/icon/arrow.png" alt="" />
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </span>
+              <img src="../img/3.png" alt="" />
+            </div>
+          </div>
+          <div class="pointed">
+            <div class="slider-dots">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- WHY CHOOSE US -->
+    <div class="container-1">
+      <div class="donkey-2">
+        <div class="cuuter">
+          <div class="us-header choose">
+            <span>WHY CHOOSE US</span>
+            <span class="reason">WHY WE ARE BEST</span>
+          </div>
+          <div class="batches">
+            <div class="batch-box-1">
+              <div class="box-maintainer">
+                <img src="../img/icon/aim.png" alt="" />
+                <div class="batch-box-header">Clarified Vision & Target</div>
+                <div class="last-txt">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy.
+                </div>
+              </div>
+            </div>
+            <div class="batch-box-2">
+              <div class="box-maintainer">
+                <img src="../img/icon/perfomance.png" alt="" />
+                <div class="batch-box-header">High Performance</div>
+                <div class="last-txt">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy.
+                </div>
+              </div>
+            </div>
+            <div class="batch-box-3">
+              <div class="box-maintainer">
+                <img src="../img/icon/security.png" alt="" />
+                <div class="batch-box-header">Maintain Security</div>
+                <div class="last-txt">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy.
+                </div>
+              </div>
+            </div>
+            <div class="batch-box-4">
+              <div class="box-maintainer">
+                <img src="../img/icon/startegy.png" alt="" />
+                <div class="batch-box-header">Better Strategy & Quality</div>
+                <div class="last-txt">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nexter">
+            <div class="us-header choose">
+              <span>OUR PROJECT</span>
+              <span class="reason">WHY WE ARE BEST</span>
+            </div>
+          </div>
+          <div class="bowl">
+            <div class="first">
+              <img src="../img/icon/image.png" id="mainImage" alt="" />
+            </div>
+            <div class="second">
+              <div class="bozz">
+                <div
+                  class="box-1"
+                  onclick="changeImage('../img/icon/image.png')"
+                >
+                  <div class="love">
+                    <div class="box-header">Genderless Kei – Japan’s Hot</div>
+                  </div>
+                  <div class="box-txt">
+                    Set to launch on the manufacturer’s new A330neo aircraft in
+                    2017, it’s offering lots of
+                  </div>
+                </div>
+                <div
+                  class="box-2"
+                  onclick="changeImage('../img/icon/image2.png')"
+                >
+                  <div class="love">
+                    <div class="box-header" id="love-2">
+                      Better Strategy & Quality
+                    </div>
+                  </div>
+                  <div class="box-txt">
+                    Set to launch on the manufacturer’s new A330neo aircraft in
+                    2017, it’s offering lots of
+                  </div>
+                </div>
+                <div
+                  class="box-3"
+                  onclick="changeImage('../img/icon/image3.png')"
+                >
+                  <div class="love">
+                    <div class="box-header">Genderless Kei – Japan’s Hot</div>
+                  </div>
+                  <div class="box-txt">
+                    Set to launch on the manufacturer’s new A330neo aircraft in
+                    2017, it’s offering lots of
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-sec">
+      <div class="container-1">
+        <div class="donkey-3">
+          <div class="us-header">
+            <span>EXPERTS GROWTS</span>
+            <span class="reason">OUR COMPANY GROWTHS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="operation-box">
+      <div class="container-brof">
+        <div class="same-box">
+          <div class="brof">
+            <img src="../img/icon/heart.png" alt="" />
+            <p class="stat">199+</p>
+            <p class="label">Staticfied Customers</p>
+          </div>
+        </div>
+        <div class="same-box">
+          <div class="brof">
+            <img src="../img/icon/clock.png" alt="" />
+            <p class="stat">1591+</p>
+            <p class="label">Days Of Operation</p>
+          </div>
+        </div>
+        <div class="same-box">
+          <div class="brof">
+            <img src="../img/icon/Path.png" alt="" />
+            <p class="stat">283+</p>
+            <p class="label">Complete Project</p>
+          </div>
+        </div>
+        <div class="same-box">
+          <div class="brof">
+            <img src="../img/icon/trop.png" alt="" />
+            <p class="stat">75+</p>
+            <p class="label">Win Awards</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container-1">
+        <div class="donkey-4">
+          <div class="us-header">
+            <span>CLIENT'S FEEDBACK</span>
+            <span class="reason">PEOPLE SAY'S ABOUT US !</span>
+          </div>
+          <div class="lass">
+            <div class="name-1">
+              <img src="../img/icon/Quotemarks.png" alt="" />
+              <span>
+                Jannat Tumpa The standard chunk of Lorem Ipsum used since the
+                1500s is reproduced below for those interested. Sections Bonorum
+                et Malorum original.
+              </span>
+            </div>
+            <div class="name">
+              <span>JANNAT TUMPA</span>
+              <span>- COO, AMERIMAR ENTERPRISES, INC.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lasst">
+      <div class="loi">
+        <img src="../img/icon/NoPath.png" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
